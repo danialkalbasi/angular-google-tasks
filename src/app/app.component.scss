@@ -1,0 +1,51 @@
+@import './styles/variables';
+$container-padding: 32px;
+.nav-container {
+    height: 100%;
+    display: contents;
+}
+
+.left-sidebar {
+    width: 282px;
+    padding: $container-padding;
+    box-shadow: 9px -3px 8px -8px #4a4a4a1f;
+}
+
+.main-content {
+    padding: $container-padding;
+}
+
+.spinner {
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    z-index: 1000;
+}
+
+.signin-container {
+    background-color: #22A7F0;
+    height: 900px;
+    z-index: 999;
+}
+.signin-inner{
+    display: block;
+    margin: 0 auto;
+    padding-top: 20%;
+    text-align: center;
+}
+.signin-button {
+    background: #fff;
+    padding: 10px 56px;
+    border-radius: 100px;
+    box-shadow: 2px 1px 9px 0px #00000024;
+}
+.signin-title{
+    text-transform: uppercase;
+    font-size: 26px;
+    display: block;
+    font-weight: 200;
+    margin-bottom: 15px;
+    letter-spacing: 5px;
+    margin: 0px 0 40px 0;
+    color: #fff;
+}

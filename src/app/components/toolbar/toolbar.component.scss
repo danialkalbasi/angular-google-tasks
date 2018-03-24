@@ -1,0 +1,12 @@
+.toolbar-container {
+    display: flex;
+    .toolbar {
+        flex-direction: row;
+        justify-content: space-between;
+        background: #fff;
+    }
+    span {
+        position: absolute;
+        right: 50px;
+    }
+}

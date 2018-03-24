@@ -1,0 +1,20 @@
+<mat-spinner *ngIf="isInProgress" diameter="50" class="spinner" color="primary"></mat-spinner>
+
+<div class="signin-container" *ngIf="!isSignIn">
+    <div class="signin-inner">
+        <span class="signin-title">To Get Started</span>
+        <button class="signin-button" (click)="authenticate()" mat-button>Sign In to Google</button>
+    </div>
+</div>
+
+<main class="main-container" *ngIf="isSignIn">
+    <app-toolbar></app-toolbar>
+    <mat-sidenav-container class="nav-container" autosize>
+        <mat-sidenav class="left-sidebar" [fixedInViewport]="true" [fixedTopGap]="0" [fixedBottomGap]="0" opened mode="side">
+            <app-task-lists [lists]="taskLists" (selectTask)="onSelectList($event)"></app-task-lists>
+        </mat-sidenav>
+        <section class="main-content">
+            <app-tasks (updateTask)="onTaskUpdate($event)" [list]="selectedList" [tasks]="tasks"></app-tasks>
+        </section>
+    </mat-sidenav-container>
+</main>

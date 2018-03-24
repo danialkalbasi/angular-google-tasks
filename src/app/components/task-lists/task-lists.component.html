@@ -1,0 +1,13 @@
+<section class="task-lists-container">
+  <span class="recent-title">recent lists</span>
+  <ul class="task-lists">
+    <li class="no-task-message" *ngIf="!lists.length"><span>There is no lists!</span></li>
+    <li *ngFor="let list of lists; let i = index" (click)="onSelectList(list)">
+      <span [ngClass]="list.cssClass"></span> <span class="text">{{ list.title }}</span>
+    </li>
+    <li class="hide new-item">
+      <span class="square square-white"> <mat-icon>add</mat-icon> </span>
+      <span class="text">Create new list</span>
+    </li>
+  </ul>
+</section>

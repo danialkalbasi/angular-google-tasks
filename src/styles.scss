@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'app/styles/index';
+* {
+    outline: none !important;
+}
+
+body {
+    background-color: $secondary-color;
+    height: 100%;
+    display: contents;
+    overflow-x: hidden;
+}
+
+
+/** Common **/
+.mat-pseudo-checkbox-checked::after {
+    top: 6px !important;
+    left: 4px !important;
+}
+.mat-form-field-underline{
+    background-color: rgba(0, 0, 0, 0.21) !important;
+}

@@ -1,0 +1,19 @@
+.task-editor-container {
+    mat-form-field {
+        display: block;
+    }
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #9a9a9a;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.task-name {
+    input {
+        font-size: 22px;
+    }
+}

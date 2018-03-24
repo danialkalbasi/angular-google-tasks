@@ -1,0 +1,31 @@
+<section class="tasks-container">
+  <div class="hide">
+    <button class="float-right" mat-fab color="primary"><mat-icon>add</mat-icon></button>
+  </div>
+  <span class="tasks-title">This Week</span> <small class="tasks-subtitle">{{ list.title }}</small>
+  <ul class="tasks">
+    <li *ngFor="let task of tasks; let i = index" class="task">
+      <div class="inner-task">
+        <div>
+          <mat-checkbox
+            color="warn"
+            (change)="toggleIsDone(i)"
+            [checked]="task.status"
+          ></mat-checkbox>
+        </div>
+        <p>{{ task.title }}</p>
+        <p class="task-date">{{ stringToDate(task.due) }}</p>
+      </div>
+      <!-- When the feature is complete, display it -->
+      <div class="hide">
+        <app-action-controls
+          (editItem)="onTaskEdit(task)"
+          class="action-controls"
+        ></app-action-controls>
+      </div>
+    </li>
+    <li *ngIf="!tasks.length">
+      <div class="inner-task"><p>There is no tasks!</p></div>
+    </li>
+  </ul>
+</section>

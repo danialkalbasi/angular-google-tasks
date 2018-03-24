@@ -1,0 +1,94 @@
+.tasks-container {
+    padding: 20px;
+}
+
+.tasks-title {
+    text-transform: uppercase;
+    font-size: 26px;
+    display: block;
+    font-weight: 200;
+    letter-spacing: 5px;
+    margin: 0px 0 0 0;
+}
+
+.tasks-subtitle {
+    margin-bottom: 30px;
+    display: block;
+    color: #7d7d7d;
+}
+
+.new-task {
+    .form-field {
+        width: 100%;
+        display: inline-block;
+        margin-left: 18px;
+        margin-top: -12px;
+        input {
+            width: 80%;
+        }
+    }
+}
+
+.tasks {
+    list-style: none;
+    padding: 0;
+    float: left;
+}
+
+.action-controls {
+    position: absolute;
+    opacity: 0;
+    right: 9px;
+    transition: all 0.2s;
+    margin-top: 6px;
+    bottom: 10px;
+}
+
+.task {
+    background: #fff;
+    float: left;
+    margin-right: 20px;
+    padding: 27px 20px 20px 0;
+    border-radius: 7px;
+    min-height: 158px;
+    transition: all 0.2s;
+    position: relative;
+    margin-top: 20px;
+    box-shadow: 1px 2px 5px 1px #0000000a;
+    width: 225px;
+    &:hover {
+        transition: all 0.2s;
+        background-color: #fdfdff;
+    }
+    &:hover .action-controls {
+        opacity: 1;
+    }
+    .inner-task {
+        margin-left: 10px;
+        margin: 0;
+        border-left: 2px solid #466fff;
+        padding: 0 22px;
+        min-height: 45px;
+        p {
+            margin: 0;
+            font-size: 18px;
+            text-overflow: ellipsis;
+    width: 159px;
+    overflow: hidden;
+    white-space: nowrap;
+        }
+        .task-date {
+            user-select: none;
+            color: #C5C8CE;
+            line-height: 150%;
+            font-size: 12px !important;
+        }
+    }
+}
+
+.edit-button {
+    opacity: 0;
+    position: absolute !important;
+    right: 10px;
+    top: 1px;
+}

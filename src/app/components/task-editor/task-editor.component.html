@@ -1,0 +1,23 @@
+<form class="task-editor-container">
+  <span class="title">Task details</span>
+  <mat-form-field class="task-name"> <input matInput placeholder="Task Name" /> </mat-form-field>
+  <mat-form-field>
+    <input matInput [matDatepicker]="dp" placeholder="Due date" disabled />
+    <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+    <mat-datepicker #dp disabled="false"></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea
+      matInput
+      placeholder="Description"
+      matTextareaAutosize
+      matAutosizeMinRows="3"
+      matAutosizeMaxRows="5"
+    ></textarea>
+  </mat-form-field>
+  <div>
+    <button type="button" mat-raised-button color="primary">Save</button>
+    <button type="button" mat-raised-button>Cancel</button>
+    <button mat-raised-button type="button" class="float-right">Move</button>
+  </div>
+</form>
