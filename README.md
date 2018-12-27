@@ -1,13 +1,16 @@
-# Angular Google Tasks
+# Google Task APIs implementation with Angular 5+
 ![Angular Google Tasks](https://github.com/danielkalbasi/angular-google-tasks/blob/master/src/assets/google%20task-demo.gif?raw=true)
+A simple implementation of Google Task APIs with Angular 5.x. If you are new to Angular, this project will help you to grasp some of the main concepts of the Angular/TypeScript and learn a few other useful techniques!
+- Angular Module usage
+- Create dumb ui components
+- Usage of services
+- Unit testing techniques
 
-Google Task APIs implementation with Angular 5+ and TypeScript.
+## Get Started
+## 1. Install npm packages
+Run `yarn` or `npm install`
 
-## To Get Started
-### 1. Install npm packages
-Run `yarn install` or `yarn`
-
-### 2. Store your google api keys
+## 2. Store your google api keys
 Create a google-api.json in your application root directory with following structure: 
 ````
 {
@@ -17,17 +20,16 @@ Create a google-api.json in your application root directory with following struc
     }
 }
 ````
+In order to run the application, you need to get your API Key and Client ID from the Google Developer Console. You can find out more in here: https://developers.google.com/google-apps/tasks/quickstart/js
 
-In order to use this application, you need to get your API Key and Client ID from the Google developer console. You can find out more in here: https://developers.google.com/google-apps/tasks/quickstart/js
-
-### Run localhost
-Run `ng serve`
+## Run on localhost
+Run `ng serve` or `yarn serve`
 
 ## Run unit tests
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test` or `yarn test`
 
 ## generate code documentation
 Run `yarn compodoc` to generate the code documentation for the project with compodoc.
 
 ## Build
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build` or `yarn build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
